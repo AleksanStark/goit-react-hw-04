@@ -2,7 +2,7 @@ import css from "./SearchBar.module.css";
 import toast, { Toaster } from "react-hot-toast";
 import { Formik, Form, Field } from "formik";
 
-export const SearchBar = ({ onSearch }) => {
+const SearchBar = ({ onSearch }) => {
   const handleSubmit = (values, actions) => {
     values.search !== ""
       ? onSearch(values.search)
@@ -31,3 +31,4 @@ export const SearchBar = ({ onSearch }) => {
     </header>
   );
 };
+export default SearchBar;

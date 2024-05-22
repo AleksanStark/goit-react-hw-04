@@ -1,14 +1,10 @@
 import { useState, useEffect } from "react";
-
-import getPhotos from "helpers/photos-api";
-import {
-  Loader,
-  SearchBar,
-  ImageGallery,
-  ErrorMessage,
-  LoadMoreBtn,
-} from "./components";
-
+import getPhotos from "./helpers/photos-api";
+import ImageGallery from "./components/ImageGallery/ImageGallery";
+import Loader from "./components/Loader/Loader";
+import SearchBar from "./components/SearchBar/SearchBar";
+import LoadMoreBtn from "./components/LoadMoreBtn/LoadMoreBtn";
+import ErrorMessage from "./components/ErrorMessage/ErrorMessage";
 const App = () => {
   const [photos, setPhotos] = useState([]);
   const [inputValue, setInputValue] = useState("");
